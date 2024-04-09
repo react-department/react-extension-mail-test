@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  gap: 23px;
+  padding: 26px 22px 19px 22px;
+  margin-bottom: 18px;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .label {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .image {
+      width: 72px;
+      height: auto;
+    }
+
+    .name {
+      margin-top: auto;
+      color: rgba(0, 0, 0, 0.67);
+      font-size: 12px;
+    }
+  }
+}

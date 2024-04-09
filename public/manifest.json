@@ -1,0 +1,33 @@
+{
+  "name": "Chrome React Extension",
+  "description": "The power of React and TypeScript for building interactive Chrome extensions",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open the popup"
+  },
+  "background": {
+    "service_worker": "./static/js/background.js"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["./static/js/content.js"],
+      "css": ["./static/css/content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions":[
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [ "http://*/*", "https://*/*"]
+}
